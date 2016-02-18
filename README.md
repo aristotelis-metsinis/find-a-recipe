@@ -218,7 +218,9 @@ https://devcenter.heroku.com/articles/config-vars#example
       ```
 	
 	  It will finish installing the toolbelt and ask you for your credentials. More 
-	  details on `Heroku Toolbelt` page : `https://toolbelt.heroku.com/`
+	  details on `Heroku Toolbelt` page : 
+	  
+	  https://toolbelt.heroku.com/
 	
 	* Set the `FOOD2FORK_KEY` environment variable by running :
 	
@@ -245,7 +247,7 @@ https://devcenter.heroku.com/articles/config-vars#example
 		
 	  Generally, make sure your `Gemfile` looks like this :
 	
-	  `https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile`
+	  https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile
 	
 	* Run : 
 	
@@ -287,7 +289,7 @@ https://devcenter.heroku.com/articles/config-vars#example
 	  heroku open
       ```
 
-More information on Heroku Dev Center : `https://devcenter.heroku.com/`
+More information on Heroku Dev Center : https://devcenter.heroku.com/
 
 ### Self Grading/Feedback
 
