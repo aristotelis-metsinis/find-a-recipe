@@ -1,4 +1,4 @@
-## Coding Assignment : Recipe Finder
+## Coding Assignment : Recipe Finder 
   * online 'Coursera' course : Ruby on Rails - An Introduction 
   * offered by : Johns Hopkins University 
   * course link : https://www.coursera.org/learn/ruby-on-rails-intro/
@@ -211,7 +211,7 @@ https://devcenter.heroku.com/articles/config-vars#example
     Deploying to Heroku
 
     * First, you need to have a `Heroku` account. After signing up, download and install 
-	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type 
+	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type :
 	
       ```shell
 	  heroku login 
