@@ -15,7 +15,7 @@ The functional goal is to provide web page access to recipe information
 served by `http://food2fork.com/api` through JSON and images. Documentation for the 
 API can be found at http://food2fork.com/about/api
 
-Access the bootstrap files on Google Drive: `https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams` 
+Access the bootstrap files on Google Drive: https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams 
 
 ### Functional Requirements
 
@@ -109,7 +109,7 @@ will (obviously) fail until you complete the specified solution.
 6. Implement your Rails app solution and use the rspec tests to help 
 verify your completed Rails app solution.
 
-7. (Optional) Post your Rails app solution to Heroku.
+7. Post your Rails app solution to Heroku.
 
 8. Submit your Rails app solution for grading.
 
@@ -138,8 +138,8 @@ method.
     * query the Food2Fork API for a result. 
     * add the HTTP query parameter `key` (your developer key) to each 
       outgoing URL request to `http://food2fork.com/api` using HTTParty `default_params`.
-    * obtain the key value from an environment variable FOOD2FORK_KEY.
-    * obtain the url (and/or port) value from an environment variable FOOD2FORK_SERVER_AND_PORT.
+    * obtain the key value from an environment variable `FOOD2FORK_KEY`.
+    * obtain the url (and/or port) value from an environment variable `FOOD2FORK_SERVER_AND_PORT`.
 
     You will use the `http://food2fork.com/api` host and port# (default=:80)
     during development and Heroku deployment.  However, your assignment
@@ -204,14 +204,14 @@ default (root). You should therefore be able to go to
 results.
 
 12. Deploy your app to Heroku at `https://<app-name>.herokuapp.com/`. The app 
-developed can be found at : `https://find-a-recipe.herokuapp.com/`. Instructions 
+developed can be found at : https://find-a-recipe.herokuapp.com/. Instructions 
 for doing that can be found below as well as at the following link: 
-`https://devcenter.heroku.com/articles/config-vars#example`
+https://devcenter.heroku.com/articles/config-vars#example
 	
 Deploying to Heroku
 
-	* First, you need to have a `Heroku` account. After signing up, download and install 
-	the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type 
+    * First, you need to have a `Heroku` account. After signing up, download and install 
+	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type 
 	
 	```shell
 	heroku login 
