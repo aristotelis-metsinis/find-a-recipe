@@ -1,5 +1,12 @@
 <h1>Searching for - <%= @search_term %></h1>
 
+<p>
+you may specify the search keyword using just the url with the following syntax in the browser :</br>
+&nbsp&nbsp&nbsp&nbsphttps://find-a-recipe.herokuapp.com?search=&lt<b><i>keyword&gt</i></b></br>
+for example: </br>
+&nbsp&nbsp&nbsp&nbsp<a href="https://find-a-recipe.herokuapp.com?search=lemon">https://find-a-recipe.herokuapp.com?search=<b><i>lemon</i></b></a></br></br>
+</p>
+
 <% if @recipes.nil? %>
 	<p>Sorry no recipes found ...</p>
 <% else %>
