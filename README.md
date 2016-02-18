@@ -213,18 +213,18 @@ https://devcenter.heroku.com/articles/config-vars#example
     * First, you need to have a `Heroku` account. After signing up, download and install 
 	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type 
 	
-    ```shell
-	heroku login 
-    ```
+      ```shell
+	  heroku login 
+      ```
 	
-	It will finish installing the toolbelt and ask you for your credentials. More 
-	details on `Heroku Toolbelt` page : `https://toolbelt.heroku.com/`
+	  It will finish installing the toolbelt and ask you for your credentials. More 
+	  details on `Heroku Toolbelt` page : `https://toolbelt.heroku.com/`
 	
 	* Set the `FOOD2FORK_KEY` environment variable by running :
 	
-    ```shell
-	heroku config:set FOOD2FORK_KEY=<your-api-key>
-    ```
+      ```shell
+	  heroku config:set FOOD2FORK_KEY=<your-api-key>
+      ```
 	
 	* Add the following to your `Gemfile` :
 	
