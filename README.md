@@ -228,64 +228,64 @@ https://devcenter.heroku.com/articles/config-vars#example
 	
 	* Add the following to your `Gemfile` :
 	
-    ```shell
-	group :production do
+      ```shell
+	  group :production do
 		gem 'pg'
 		gem 'rails_12factor'
-	end
-    ```
+	  end
+      ```
 	
-	Find where gem `sqlite3` is on `Gemfile` and move it to a group, like the following : 
+	  Find where gem `sqlite3` is on `Gemfile` and move it to a group, like the following : 
 	
-    ```shell
-	group :development, :test do
+      ```shell
+	  group :development, :test do
 		gem 'sqlite3'
-	end
-    ```
+	  end
+      ```
 		
-	Generally, make sure your `Gemfile` looks like this :
+	  Generally, make sure your `Gemfile` looks like this :
 	
-	`https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile`
+	  `https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile`
 	
 	* Run : 
 	
-    ```shell
-	bundle --without production
-    ```
+      ```shell
+	  bundle --without production
+      ```
 	
 	* Initialize and commit to `git` :
 	
-    ```shell
-	git init
+      ```shell
+	  git init
 		
-	git add .
+	  git add .
 		
-	git commit -m "<commit description>"
-    ```
+	  git commit -m "<commit description>"
+      ```
 	
 	* Create a `Heroku` app :
 	
-    ```shell
-	heroku create <app-name>
-    ```
+      ```shell
+	  heroku create <app-name>
+      ```
 	
 	* Push to `Heroku` : 
 	
-    ```shell
-	git push heroku master
-    ```
+      ```shell
+	  git push heroku master
+      ```
 	
 	* Migrate your database : 
 		
-    ```shell
-	heroku run rake db:migrate
-    ```
+      ```shell
+	  heroku run rake db:migrate
+      ```
 	
 	* Visit you application : 
 	
-    ```shell
-	heroku open
-    ```
+      ```shell
+	  heroku open
+      ```
 
 More information on Heroku Dev Center : `https://devcenter.heroku.com/`
 
