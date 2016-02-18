@@ -208,40 +208,40 @@ developed can be found at : https://find-a-recipe.herokuapp.com/. Instructions
 for doing that can be found below as well as at the following link: 
 https://devcenter.heroku.com/articles/config-vars#example
 	
-Deploying to Heroku
+    Deploying to Heroku
 
     * First, you need to have a `Heroku` account. After signing up, download and install 
 	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type 
 	
-	```shell
+    ```shell
 	heroku login 
-	```
+    ```
 	
 	It will finish installing the toolbelt and ask you for your credentials. More 
 	details on `Heroku Toolbelt` page : `https://toolbelt.heroku.com/`
 	
-	* Set the FOOD2FORK_KEY environment variable by running :
+	* Set the `FOOD2FORK_KEY` environment variable by running :
 	
-	```shell
+    ```shell
 	heroku config:set FOOD2FORK_KEY=<your-api-key>
-	```
+    ```
 	
 	* Add the following to your `Gemfile` :
 	
-	```shell
+    ```shell
 	group :production do
 		gem 'pg'
 		gem 'rails_12factor'
 	end
-	```
+    ```
 	
 	Find where gem `sqlite3` is on `Gemfile` and move it to a group, like the following : 
 	
-	```shell
+    ```shell
 	group :development, :test do
 		gem 'sqlite3'
 	end
-	```
+    ```
 		
 	Generally, make sure your `Gemfile` looks like this :
 	
@@ -249,43 +249,43 @@ Deploying to Heroku
 	
 	* Run : 
 	
-	```shell
+    ```shell
 	bundle --without production
-	```
+    ```
 	
 	* Initialize and commit to `git` :
 	
-	```shell
+    ```shell
 	git init
 		
 	git add .
 		
 	git commit -m "<commit description>"
-	```
+    ```
 	
 	* Create a `Heroku` app :
 	
-	```shell
+    ```shell
 	heroku create <app-name>
-	```
+    ```
 	
 	* Push to `Heroku` : 
 	
-	```shell
+    ```shell
 	git push heroku master
-	```
+    ```
 	
 	* Migrate your database : 
 		
-	```shell
+    ```shell
 	heroku run rake db:migrate
-	```
+    ```
 	
 	* Visit you application : 
 	
-	```shell
+    ```shell
 	heroku open
-	```
+    ```
 
 More information on Heroku Dev Center : `https://devcenter.heroku.com/`
 
