@@ -1,14 +1,14 @@
-## Coding Assignment : Recipe Finder 
-  * online 'Coursera' course : Ruby on Rails - An Introduction 
-  * offered by : Johns Hopkins University 
+## Coding Assignment : Recipe Finder
+  * online **Coursera** course : **Ruby on Rails - An Introduction** 
+  * offered by : **Johns Hopkins University** 
   * course link : https://www.coursera.org/learn/ruby-on-rails-intro/
 
-The overall goal of this assignment is to implement a Rails application using model,
+The overall goal of this assignment is to implement a **Rails** application using model,
 view, and controller classes.
 
-  * the model class will access information.
-  * the view class will display information and accept commands from the user.
-  * the controller class will implement actions through internal service logic
+  * the **model** class will access information.
+  * the **view** class will display information and accept commands from the user.
+  * the **controller** class will implement actions through internal service logic
     and the delegation to model and view classes.
 
 The functional goal is to provide web page access to recipe information
@@ -30,10 +30,10 @@ index page based on a search keyword entered.
   * the web page displayed will provide HTML links to more detailed recipe information
     from other web sites.
 
-Remember, you will not need to `require` HTTParty gem in your code, since loading 
+Remember, you will not need to `require HTTParty` gem in your code, since loading 
 HTTParty gem should be the Bundler's job.
 
-You are also tasked with deploying your solution to Heroku - to be accessed by 
+You are also tasked with deploying your solution to **Heroku** - to be accessed by 
 friends, family, other students, co-workers, and prospective employers.
 
 ### Getting Started
@@ -42,7 +42,7 @@ friends, family, other students, co-workers, and prospective employers.
 
 2. Download and extract the starter set of boostrap files. 
 
-    * replace the generated Gemfile with the Gemfile from the bootstrap fileset.
+    * replace the generated `Gemfile` with the `Gemfile` from the bootstrap fileset.
     * run the `bundle` command to resolve new gems. 
 
     ```shell
@@ -54,7 +54,7 @@ friends, family, other students, co-workers, and prospective employers.
         `-- spec_helper.rb
     ```
 
-3. Install the following gems used by the rspec unit tests. You may have
+3. Install the following gems used by the **rspec** unit tests. You may have
 some of these already installed. The last gem is used for headless 
 web page testing.
 
@@ -65,8 +65,8 @@ web page testing.
     $ gem install poltergeist
     ```
 
-4. Make sure phantomJS is installed and in your bin PATH on your system
-($ phantomjs --version). This binary is used by the `poltergeist`
+4. Make sure **phantomJS** is installed and in your bin `PATH` on your system
+(`$ phantomjs --version`). This binary is used by the `poltergeist`
 gem to implement a headless unit test for the Web interface.  You can
 interact with your Rails app directly using a browser without this
 library. It is only needed by the rspec tests to provide you feedback
@@ -109,21 +109,21 @@ will (obviously) fail until you complete the specified solution.
 6. Implement your Rails app solution and use the rspec tests to help 
 verify your completed Rails app solution.
 
-7. Post your Rails app solution to Heroku.
+7. Post your **Rails** app solution to **Heroku**.
 
 8. Submit your Rails app solution for grading.
 
 ### Technical Requirements
 
-1. Create a new Rails app called `recipefinder`. Use the Gemfile provided
-in the boostrap files. Do not change the Gemfile from what is provided
+1. Create a new Rails app called `recipefinder`. Use the `Gemfile` provided
+in the boostrap files. Do not change the `Gemfile` from what is provided
 or your submitted solution may not be able to be processed by the grader
 (i.e., do not add any additional gems or change gem versions).
 
 2. Generate `RecipesController` (recipes_controller.rb) that will have an
 `index` action
 
-3. The `RecipesController` index action should
+3. The `RecipesController` index action should :
 
     * check if a request parameter `search` was passed in. 
     * use the `search` term as the keyword if supplied, and use a default value of `chocolate` if 
@@ -132,10 +132,10 @@ or your submitted solution may not be able to be processed by the grader
 4. Create a model, `Recipe` (recipe.rb) that will contain a `for` class
 method.
 
-5. The `Recipe` `for` class method should 
+5. The `Recipe` `for` class method should :
 
     * take a keyword to query.
-    * query the Food2Fork API for a result. 
+    * query the **Food2Fork API** for a result. 
     * add the HTTP query parameter `key` (your developer key) to each 
       outgoing URL request to `http://food2fork.com/api` using HTTParty `default_params`.
     * obtain the key value from an environment variable `FOOD2FORK_KEY`.
@@ -162,7 +162,7 @@ in your application layout file (`application.html.erb`) to be displayed alongsi
     ```
     <p>Powered By Food2Fork.com</p>
     ```
-7. Create your view that should 
+7. Create your view that should :
 
     * list each recipe as a row in an HTML table (`<table>`).
     * Each row (`<tr>`) should have 3 columns (`<td>`) where 
@@ -210,86 +210,86 @@ https://devcenter.heroku.com/articles/config-vars#example
 	
     Deploying to Heroku
 
-    * First, you need to have a `Heroku` account. After signing up, download and install 
+    * First, you need to have a Heroku account. After signing up, download and install 
 	  the `Heroku Toolbelt` appropriate to your Operating System. Open up the console and type :
 	
-      ```shell
-	  heroku login 
-      ```
+        ```shell
+	    heroku login 
+        ```
 	
-	  It will finish installing the toolbelt and ask you for your credentials. More 
-	  details on `Heroku Toolbelt` page : 
+        It will finish installing the toolbelt and ask you for your credentials. More 
+        details on `Heroku Toolbelt` page : 
 	  
-	  https://toolbelt.heroku.com/
+        https://toolbelt.heroku.com/
 	
 	* Set the `FOOD2FORK_KEY` environment variable by running :
 	
-      ```shell
-	  heroku config:set FOOD2FORK_KEY=<your-api-key>
-      ```
+        ```shell
+        heroku config:set FOOD2FORK_KEY=<your-api-key>
+        ```
 	
 	* Add the following to your `Gemfile` :
 	
-      ```shell
-	  group :production do
-		gem 'pg'
-		gem 'rails_12factor'
-	  end
-      ```
+        ```shell
+        group :production do
+           gem 'pg'
+           gem 'rails_12factor'
+        end
+        ```
 	
-	  Find where gem `sqlite3` is on `Gemfile` and move it to a group, like the following : 
+        Find where gem `sqlite3` is on `Gemfile` and move it to a group, like the following : 
 	
-      ```shell
-	  group :development, :test do
-		gem 'sqlite3'
-	  end
-      ```
+        ```shell
+        group :development, :test do
+           gem 'sqlite3'
+        end
+        ```
 		
-	  Generally, make sure your `Gemfile` looks like this :
+        Generally, make sure your `Gemfile` looks like this :
 	
-	  https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile
+        https://github.com/jhu-ep-coursera/fullstack-course1-module3/blob/master/Gemfile
 	
 	* Run : 
 	
-      ```shell
-	  bundle --without production
-      ```
+        ```shell
+        bundle --without production
+        ```
 	
 	* Initialize and commit to `git` :
 	
-      ```shell
-	  git init
+        ```shell
+        git init
 		
-	  git add .
+        git add .
 		
-	  git commit -m "<commit description>"
-      ```
+        git commit -m "<commit description>"
+        ```
 	
-	* Create a `Heroku` app :
+	* Create a Heroku app :
 	
-      ```shell
-	  heroku create <app-name>
-      ```
+        ```shell
+        heroku create <app-name>
+        ```
 	
-	* Push to `Heroku` : 
+	* Push to Heroku : 
 	
-      ```shell
-	  git push heroku master
-      ```
+        ```shell
+        git push heroku master
+        ```
 	
 	* Migrate your database : 
 		
-      ```shell
-	  heroku run rake db:migrate
-      ```
+        ```shell
+        heroku run rake db:migrate
+        ```
 	
 	* Visit you application : 
 	
-      ```shell
-	  heroku open
-      ```
+        ```shell
+        heroku open
+        ```
 
-More information on Heroku Dev Center : https://devcenter.heroku.com/
+    More information on Heroku Dev Center : https://devcenter.heroku.com/
 
 ### Self Grading/Feedback
 
@@ -320,16 +320,15 @@ The tests assume your server is running on localhost:3000. Please adjust
 the source code in `recipes_app_spec.rb` if that is not the case with 
 your development environment.
 
-  ```ruby
-  Capybara.app_host = "http://localhost:3000"
-  ```
-
+```ruby
+Capybara.app_host = "http://localhost:3000"
+```
 
 ### Submission
 
-Submit an .zip archive (other archive forms not currently supported)
-with your solution root directory as the top-level, e.g., your Gemfile
-and sibling files must be in the root of the archive and *not* in a
+Submit an `.zip` archive (other archive forms not currently supported)
+with your solution root directory as the top-level, e.g., your `Gemfile`
+and sibling files must be in the root of the archive and **not** in a
 sub-folder.  The grader will replace the spec files with fresh copies
 and will perform a test with different query terms.
 
