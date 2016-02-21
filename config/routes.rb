@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  # Redirects incoming requests to "controllers" and "actions".
+  # Defines the "actions" available in the app and the type of "action" (e.g. "get"), 
+  # which are defined as "methods" in the "Controller" class,
+  # as well as the "routes" for these "actions".
   get 'recipes/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  # You can have the root of your site routed with "root".
+  # Make the "RecipesController index" action the default (root) page for the app. 
+  # Instead of having to go to "http://localhost:3000/recipes/index" to get to the recipes, 
+  # this page will be the default (root) being able to go to 
+  # "http://localhost:3000/?search=apple%20pie" for example and see the results.
   root 'recipes#index'
 
   # Example of regular route:

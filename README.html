@@ -1,4 +1,4 @@
-<h2 id="coding-assignment-recipe-finder">Coding Assignment : Recipe Finder</h2>
+<h2 id="coding-assignment-recipe-finder">Coding Assignment : Recipe Finder</h2> 
 <ul>
 <li>online <strong>Coursera</strong> course : <strong>Ruby on Rails - An Introduction</strong><br /></li>
 <li>offered by : <strong>Johns Hopkins University</strong><br /></li>
@@ -6,23 +6,23 @@
 <li>the app developed has been deployed on <strong>Heroku</strong> at : <a href="https://find-a-recipe.herokuapp.com/">https://find-a-recipe.herokuapp.com/</a><br /></li>
 <li><strong>GitHub</strong> repository of this app can be found at : <a href="https://github.com/ametsi/find-a-recipe">https://github.com/ametsi/find-a-recipe</a></li>
 </ul>
-<p>The overall goal of this assignment is to implement a <strong>Rails</strong> application using model, view, and controller classes.</p>
+<p>The overall goal of this assignment is to implement a <strong>Rails</strong> application using <strong>model</strong>, <strong>view</strong>, and <strong>controller</strong> classes :</p>
 <ul>
 <li>the <strong>model</strong> class will access information.<br /></li>
 <li>the <strong>view</strong> class will display information and accept commands from the user.<br /></li>
-<li>the <strong>controller</strong> class will implement actions through internal service logic and the delegation to model and view classes.</li>
+<li>the <strong>controller</strong> class will implement <strong>actions</strong> through internal service logic and the delegation to <strong>model</strong> and <strong>view</strong> classes.</li>
 </ul>
 <p>The functional goal is to provide web page access to recipe information served by <code>http://food2fork.com/api</code> through JSON and images. Documentation for the API can be found at <a href="http://food2fork.com/about/api">http://food2fork.com/about/api</a></p>
-<p>Access the bootstrap files on Google Drive: <a href="https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams">https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams</a></p>
+<p>Access the bootstrap files on Google Drive : <a href="https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams">https://drive.google.com/open?id=0Bwvt4e6DQqn4VE5id1lJeGtLams</a></p>
 <h3 id="functional-requirements">Functional Requirements</h3>
-<p>You are tasked with creating a <strong>Rails</strong> app that will display a recipe index page based on a search keyword entered :</p>
+<p>You are tasked with creating a <strong>Rails</strong> app that will display a recipe <code>index</code> page based on a <code>search</code> keyword entered :</p>
 <ul>
 <li>the user will supply a keyword to search for.<br /></li>
-<li>the Rails app will pass that query to <code>http://food2fork.com/api</code> and accept the results.<br /></li>
-<li>the Rails app will build a web page display of the results and accept the next keyword search.<br /></li>
+<li>the <strong>Rails</strong> app will pass that query to <code>http://food2fork.com/api</code> and accept the results.<br /></li>
+<li>the <strong>Rails</strong> app will build a web page display of the results and accept the next keyword <code>search</code>.<br /></li>
 <li>the web page displayed will provide HTML links to more detailed recipe information from other web sites.</li>
 </ul>
-<p>Remember, you will not need to <code>require HTTParty</code> gem in your code, since loading HTTParty gem should be the Bundler's job.</p>
+<p>Remember, you will not need to <code>require HTTParty</code> gem in your code, since loading <strong>HTTParty</strong> gem should be the Bundler's job.</p>
 <p>You are also tasked with deploying your solution to <strong>Heroku</strong> - to be accessed by friends, family, other students, co-workers, and prospective employers.</p>
 <h3 id="getting-started">Getting Started</h3>
 <ol>
@@ -43,12 +43,12 @@
 $ gem install rspec-its
 $ gem install capybara
 $ gem install poltergeist</code></pre></li>
-<li><p>Make sure <strong>phantomJS</strong> is installed and in your bin <code>PATH</code> on your system (<code>$ phantomjs --version</code>). This binary is used by the <code>poltergeist</code> gem to implement a headless unit test for the Web interface. You can interact with your Rails app directly using a browser without this library. It is only needed by the rspec tests to provide you feedback for example criteria the grader will be looking for later when submitted. In case you need more information, the download URLs are below. Linux users will need to use version 1.9.8 or build from source. All other platforms can easily use 2.0.0.</p>
+<li><p>Make sure <strong>phantomJS</strong> is installed and in your bin <code>PATH</code> on your system (<code>$ phantomjs --version</code>). This binary is used by the <code>poltergeist</code> gem to implement a headless unit test for the Web interface. You can interact with your <strong>Rails</strong> app directly using a browser without this library. It is only needed by the <strong>rspec</strong> tests to provide you feedback for example criteria the grader will be looking for later when submitted. In case you need more information, the download URLs are below. Linux users will need to use version 1.9.8 or build from source. All other platforms can easily use 2.0.0.</p>
 <ul>
 <li>phantomjs downloads: <a href="http://phantomjs.org/download.html">http://phantomjs.org/download.html</a><br /></li>
 <li>bitbucket: <a href="https://bitbucket.org/ariya/phantomjs/downloads">https://bitbucket.org/ariya/phantomjs/downloads</a></li>
 </ul></li>
-<li><p>Run the rspec test(s) to receive feedback. They can be run from their original location. If you copy/move them, be sure to include the important <code>.rspec</code> hidden file. All tests will (obviously) fail until you complete the specified solution.</p>
+<li><p>Run the <strong>rspec</strong> test(s) to receive feedback. They can be run from their original location. If you copy/move them, be sure to include the important <code>.rspec</code> hidden file. All tests will (obviously) fail until you complete the specified solution.</p>
 <pre class="shell"><code>Finished in 1.69 seconds (files took 0.41211 seconds to load)
 8 examples, 8 failures
 
@@ -70,29 +70,29 @@ rspec ./spec/recipes_app_spec.rb:36 # Recipes App visit root
     column 1 should have the thumbnail inside img tag inside a link tag
 rspec ./spec/recipes_app_spec.rb:40 # Recipes App visit root 
     title should be inside a second column inside a link tagink tag</code></pre></li>
-<li><p>Implement your Rails app solution and use the rspec tests to help verify your completed Rails app solution.</p></li>
+<li><p>Implement your <strong>Rails</strong> app solution and use the <strong>rspec</strong> tests to help verify your completed <strong>Rails</strong> app solution.</p></li>
 <li><p>Post your <strong>Rails</strong> app solution to <strong>Heroku</strong>.</p></li>
-<li><p>Submit your Rails app solution for grading.</p></li>
+<li><p>Submit your <strong>Rails</strong> app solution for grading.</p></li>
 </ol>
 <h3 id="technical-requirements">Technical Requirements</h3>
 <ol>
-<li><p>Create a new Rails app called <code>recipefinder</code>. Use the <code>Gemfile</code> provided in the boostrap files. Do not change the <code>Gemfile</code> from what is provided or your submitted solution may not be able to be processed by the grader (i.e., do not add any additional gems or change gem versions).</p></li>
-<li><p>Generate <code>RecipesController</code> (recipes_controller.rb) that will have an <code>index</code> action.</p></li>
-<li><p>The <code>RecipesController</code> index action should :</p>
+<li><p>Create a new <strong>Rails</strong> app called <code>recipefinder</code>. Use the <code>Gemfile</code> provided in the boostrap files. Do not change the <code>Gemfile</code> from what is provided or your submitted solution may not be able to be processed by the grader (i.e., do not add any additional gems or change gem versions).</p></li>
+<li><p>Generate <code>RecipesController</code> (recipes_controller.rb) that will have an <code>index</code> <strong>action</strong>.</p></li>
+<li><p>The <code>RecipesController</code> index <strong>action</strong> should :</p>
 <ul>
 <li>check if a request parameter <code>search</code> was passed in.<br /></li>
 <li>use the <code>search</code> term as the keyword if supplied, and use a default value of <code>chocolate</code> if not supplied.</li>
 </ul></li>
-<li><p>Create a model, <code>Recipe</code> (recipe.rb) that will contain a <code>for</code> class method.</p></li>
+<li><p>Create a <strong>model</strong>, <code>Recipe</code> (recipe.rb) that will contain a <code>for</code> class method.</p></li>
 <li><p>The <code>Recipe</code> <code>for</code> class method should :</p>
 <ul>
 <li>take a keyword to query.<br /></li>
 <li>query the <strong>Food2Fork API</strong> for a result.<br /></li>
-<li>add the HTTP query parameter <code>key</code> (your developer key) to each outgoing URL request to <code>http://food2fork.com/api</code> using HTTParty <code>default_params</code>.<br /></li>
+<li>add the HTTP query parameter <code>key</code> (your developer key) to each outgoing URL request to <code>http://food2fork.com/api</code> using <strong>HTTParty</strong> <code>default_params</code>.<br /></li>
 <li>obtain the key value from an environment variable <code>FOOD2FORK_KEY</code>.<br /></li>
 <li>obtain the url (and/or port) value from an environment variable <code>FOOD2FORK_SERVER_AND_PORT</code>.</li>
 </ul>
-<p>You will use the <code>http://food2fork.com/api</code> host and port# (default=:80) during development and Heroku deployment. However, your assignment will be graded off-line and should get its host and port# from the <code>FOOD2FORK_SERVER_AND_PORT</code> environment variable. Your assignment must use the defined value if present and default to the real value otherwise.</p>
+<p>You will use the <code>http://food2fork.com/api</code> host and port# (default=:80) during development and <strong>Heroku</strong> deployment. However, your assignment will be graded off-line and should get its host and port# from the <code>FOOD2FORK_SERVER_AND_PORT</code> environment variable. Your assignment must use the defined value if present and default to the real value otherwise.</p>
 <pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="kw">class</span> <span class="dt">Recipe</span>
     ...
     key_value = <span class="dt">ENV</span>[<span class="st">&#39;FOOD2FORK_KEY&#39;</span>]
@@ -101,7 +101,7 @@ rspec ./spec/recipes_app_spec.rb:40 # Recipes App visit root
     ...</code></pre></li>
 <li><p>Foods2Fork requires attribution when using their API. Place the following somewhere in your application layout file (<code>application.html.erb</code>) to be displayed alongside the recipes.</p>
 <pre><code>&lt;p&gt;Powered By Food2Fork.com&lt;/p&gt;</code></pre></li>
-<li><p>Create your view that should :</p>
+<li><p>Create your <strong>view</strong> that should :</p>
 <ul>
 <li>list each recipe as a row in an HTML table (<code>&lt;table&gt;</code>).<br /></li>
 <li><p>Each row (<code>&lt;tr&gt;</code>) should have 3 columns (<code>&lt;td&gt;</code>) where :</p>
@@ -113,24 +113,24 @@ rspec ./spec/recipes_app_spec.rb:40 # Recipes App visit root
 </ul>
 <p>You are not required to create an HTML form for the search term. You may specify the search keyword using just the URL with the following syntax in the browser.</p>
 <pre class="url"><code>http://localhost:3000/recipes/index?search=swiss</code></pre></li>
-<li><p>Add <code>href</code> tags to your image and title. You should be able to click on either the title or the thumbnail and go straight to the actual recipe (out there on the web). Look at <code>image_tag</code> Rails helper for help with defining an <code>img</code> tag :</p>
+<li><p>Add <code>href</code> tags to your image and title. You should be able to click on either the title or the thumbnail and go straight to the actual recipe (out there on the web). Look at <code>image_tag</code> <strong>Rails helper</strong> for help with defining an <code>img</code> tag :</p>
 <p><a href="http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#method-i-image_tag">http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#method-i-image_tag</a></p>
-<p>Use this helper as the first argument to <code>link_to</code> helper.</p></li>
+<p>Use this <strong>helper</strong> as the first argument to <code>link_to</code> helper.</p></li>
 <li><p>Inside the <code>image_tag</code> specify <code>width</code> and <code>height</code> of 100 for your images.</p></li>
-<li><p>Sanitize recipe titles displayed. Rails automatically escapes HTML in your strings to avoid XSS attacks <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>.</p>
-<p>Because of this, some of your titles will look wrong. For example, try searching for <code>mocha</code> and look at your titles. To get around this issue, Rails has a <code>sanitize</code> (or <code>raw</code>) helper :</p>
+<li><p>Sanitize recipe titles displayed. <strong>Rails</strong> automatically escapes HTML in your strings to avoid XSS attacks <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>.</p>
+<p>Because of this, some of your titles will look wrong. For example, try searching for <code>mocha</code> and look at your titles. To get around this issue, <strong>Rails</strong> has a <code>sanitize</code> (or <code>raw</code>) <strong>helper</strong> :</p>
 <p><a href="http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html#method-i-sanitize">http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html#method-i-sanitize</a></p>
 <p>that will help you display HTML characters properly.</p></li>
-<li><p>Make the <code>RecipesController</code> <code>index</code> action the default (root) page for your application. Instead of having to go to <code>http://localhost:3000/recipes/index</code> to get to your recipes, you want this page to be the default (root). You should therefore be able to go to <code>http://localhost:3000/?search=apple%20pie</code> for example and see your results.</p></li>
-<li><p>Deploy your app to Heroku at <code>https://&lt;app-name&gt;.herokuapp.com/</code>.</p>
+<li><p>Make the <code>RecipesController</code> <code>index</code> <strong>action</strong> the default (root) page for your application. Instead of having to go to <code>http://localhost:3000/recipes/index</code> to get to your recipes, you want this page to be the default (root). You should therefore be able to go to <code>http://localhost:3000/?search=apple%20pie</code> for example and see your results.</p></li>
+<li><p>Deploy your app to <strong>Heroku</strong> at <code>https://&lt;app-name&gt;.herokuapp.com/</code>.</p>
 <p><strong>The app developed can be found at : <a href="https://find-a-recipe.herokuapp.com/">https://find-a-recipe.herokuapp.com/</a></strong></p>
 <p>Instructions for doing that can be found below as well as at the following link :</p>
 <p><a href="https://devcenter.heroku.com/articles/config-vars#example">https://devcenter.heroku.com/articles/config-vars#example</a></p>
-<p>Deploying to Heroku</p>
+<p>Deploying to <strong>Heroku</strong> :</p>
 <ul>
-<li><p>First, you need to have a Heroku account. After signing up, download and install the <code>Heroku Toolbelt</code> appropriate to your Operating System. Open up the console and type :</p>
+<li><p>First, you need to have a <strong>Heroku</strong> account. After signing up, download and install the <code>Heroku Toolbelt</code> appropriate to your Operating System. Open up the console and type :</p>
 <pre class="shell"><code>heroku login </code></pre>
-<p>It will finish installing the toolbelt and ask you for your credentials. More details on <code>Heroku Toolbelt</code> page :</p>
+<p>It will finish installing the <code>Toolbelt</code> and ask you for your credentials. More details on <code>Heroku Toolbelt</code> page :</p>
 <p><a href="https://toolbelt.heroku.com/">https://toolbelt.heroku.com/</a></p></li>
 <li><p>Set the <code>FOOD2FORK_KEY</code> environment variable by running :</p>
 <pre class="shell"><code>heroku config:set FOOD2FORK_KEY=&lt;your-api-key&gt;</code></pre></li>
@@ -153,16 +153,16 @@ end</code></pre>
 git add .
 
 git commit -m &quot;&lt;commit description&gt;&quot;</code></pre></li>
-<li><p>Create a Heroku app :</p>
+<li><p>Create a <strong>Heroku</strong> app :</p>
 <pre class="shell"><code>heroku create &lt;app-name&gt;</code></pre></li>
-<li><p>Push to Heroku :</p>
+<li><p>Push to <strong>Heroku</strong> :</p>
 <pre class="shell"><code>git push heroku master</code></pre></li>
 <li><p>Migrate your database :</p>
 <pre class="shell"><code>heroku run rake db:migrate</code></pre></li>
 <li><p>Visit you application :</p>
 <pre class="shell"><code>heroku open</code></pre></li>
 </ul>
-<p>More information on Heroku Dev Center : <a href="https://devcenter.heroku.com/">https://devcenter.heroku.com/</a></p></li>
+<p>More information on <strong>Heroku</strong> Dev Center : <a href="https://devcenter.heroku.com/">https://devcenter.heroku.com/</a></p></li>
 </ol>
 <h3 id="self-gradingfeedback">Self Grading/Feedback</h3>
 <p>Some unit tests have been provided in the bootstrap files and provide examples of some tests the grader will be evaluating for when you submit your solution. They can be run from any location but be sure to copy the hidden <code>.rspec</code> file if you move them.</p>
@@ -181,10 +181,10 @@ Recipes App
 
 Finished in 2.73 seconds (files took 0.54954 seconds to load)
 8 examples, 0 failures</code></pre>
-<p>The tests assume your server is running on localhost:3000. Please adjust the source code in <code>recipes_app_spec.rb</code> if that is not the case with your development environment.</p>
+<p>The tests assume your server is running on <code>localhost:3000</code>. Please adjust the source code in <code>recipes_app_spec.rb</code> if that is not the case with your development environment.</p>
 <pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="dt">Capybara</span>.app_host = <span class="st">&quot;http://localhost:3000&quot;</span></code></pre>
 <h3 id="submission">Submission</h3>
-<p>Submit an <code>.zip</code> archive (other archive forms not currently supported) with your solution root directory as the top-level, e.g., your <code>Gemfile</code> and sibling files must be in the root of the archive and <strong>not</strong> in a sub-folder. The grader will replace the spec files with fresh copies and will perform a test with different query terms.</p>
+<p>Submit an <code>.zip</code> archive (other archive forms not currently supported) with your solution root directory as the top-level, e.g., your <code>Gemfile</code> and sibling files must be in the root of the archive and <strong>not</strong> in a sub-folder. The grader will replace the <strong>spec</strong> files with fresh copies and will perform a test with different query terms.</p>
 <pre class="text"><code>|-- app
 |   |-- assets
 |   |-- controllers

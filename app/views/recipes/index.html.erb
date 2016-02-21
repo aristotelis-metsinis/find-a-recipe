@@ -1,3 +1,16 @@
+<%# 
+  # This is a templating library that lets you embed "Ruby" into your "HTML",
+  # having as little "Ruby" code logic as possible representating visually the data.
+  #
+  # This "view" shall :
+  # * List each "recipe" as a row in an "HTML" table (<table>).
+  # * Each row (<tr>) should have 3 columns (<td>) where :
+  #   - column 1 should contain the thumbnail of the recipe,
+  #   - column 2 should contain the title and
+  #   - column 3 should contain the social rank of the recipe.
+  # It is not required to create an "HTML" form for the "search" term. You may specify the "search" keyword using just the "URL" with the following syntax in the browser :
+  # "http://localhost:3000/recipes/index?search=swiss" %>
+
 <h1>Searching for - <%= @search_term %></h1>
 
 <p>
@@ -7,9 +20,18 @@ for example: </br>
 &nbsp&nbsp&nbsp&nbsp<a href="https://find-a-recipe.herokuapp.com?search=lemon">https://find-a-recipe.herokuapp.com?search=<b><i>lemon</i></b></a></br></br>
 </p>
 
+<%#
+  # Instance variables from the "controller" are available inside the "view". 
+  # "href" tags (image_tag Rails helper) to image and title being able to click on either the title or the 
+  # thumbnail and go straight to the actual recipe (out there on the web). 
+  # Sanitize (sanitize - or raw - helper) recipe titles displayed.%>
+
 <% if @recipes.nil? %>
+
 	<p>Sorry no recipes found ...</p>
+	
 <% else %>
+
 	<table border="1">
 	  <tr>
 		<th>thumbnail</th>
