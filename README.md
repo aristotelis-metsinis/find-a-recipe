@@ -3,7 +3,7 @@
   * offered by : **Johns Hopkins University** 
   * course link : https://www.coursera.org/learn/ruby-on-rails-intro/
   * the app developed has been deployed on **Heroku** at : https://find-a-recipe.herokuapp.com/
-  * **GitHub** repository of this app can be found at : https://github.com/ametsi/find-a-recipe
+  * **GitHub** repository of this app can be found at : https://github.com/aristotelis-metsinis/find-a-recipe
 
 The overall goal of this assignment is to implement a **Rails** application using **model**, **view**, and **controller** classes :
 
