@@ -67,7 +67,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.4.1)
+    jbuilder (2.11.5)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.1.0)
@@ -191,7 +191,7 @@ DEPENDENCIES
   capybara (~> 2.4.4)
   coffee-rails (~> 4.1.0)
   httparty (= 0.13.5)
-  jbuilder (~> 2.0)
+  jbuilder (>= 2.11.5)
   jquery-rails
   pg
   phantomjs (~> 1.9.8.0)
