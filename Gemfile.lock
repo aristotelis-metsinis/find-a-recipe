@@ -2,12 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     actionmailer (4.2.3)
-      actionpack (>= 5.2.7.1)
+      actionpack (>= 5.2.4.6)
       actionview (>= 5.2.7.1)
       activejob (>= 4.2.11)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (5.2.7.1)
+    actionpack (5.2.4.6)
       actionview (>= 5.2.7.1)
       activesupport (= 4.2.3)
       rack (>= 2.1.4)
